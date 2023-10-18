@@ -13,3 +13,172 @@
  *= require_tree .
  *= require_self
  */
+
+/* Styles pour la page d'accueil */
+ .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.restaurant-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.restaurant-list {
+  list-style: none;
+  padding: 0;
+}
+
+
+.restaurant-item {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.restaurant-name {
+  font-size: 18px;
+}
+
+
+.restaurant-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles pour le rating */
+.restaurant-rating {
+  font-size: 20px;
+}
+
+
+.rating .fa-star {
+  font-size: 1.5em;
+}
+
+
+.rating .far.fa-star {
+  font-size: 1.5em;
+}
+
+/* Styles pour la page d'un restaurant */
+.container-show {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.restaurant-name-show {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+}
+
+
+.restaurant-info {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #555;
+}
+
+
+.review-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+
+.review-item {
+  margin: 10px 0;
+}
+
+
+.review-title {
+  font-weight: bold;
+}
+
+
+.create-review {
+  margin: 20px 0;
+}
+
+
+.create-review h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+
+.create-review input[type="text"],
+.create-review select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.create-review .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 20px 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+.button-back {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 20px 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover, .button-back:hover {
+  background-color: #89acd2;
+}

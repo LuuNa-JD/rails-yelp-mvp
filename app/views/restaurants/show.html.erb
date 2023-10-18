@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="your-styles.css"> <!-- Lien vers votre fichier CSS personnalisé -->
+</head>
+<body>
+    <div class="container-show">
+      <h1 class="restaurant-name-show"><%= @restaurant.name %></h1>
+      <p class="restaurant-info restaurant-address"><%= @restaurant.address %></p>
+      <p class="restaurant-info restaurant-phone-number"><%= @restaurant.phone_number %></p>
+      <p class="restaurant-info restaurant-category"><%= @restaurant.category %></p>
+
+      <h2 class="review-title">Reviews</h2>
+      <ul class="review-list">
+        <% @restaurant.reviews.each do |review| %>
+          <li class="review-item">
+            <p><strong class="review-title">Rating:</strong> <%= review.rating %></p>
+            <p><strong class="review-title">Review:</strong> <%= review.content %></p>
+          </li>
+        <% end %>
+      </ul>
+
+      <div class="create-review">
+        <h4 class="review-title">Create a Review</h4>
+        <%= simple_form_for([@restaurant, @restaurant.reviews.build]) do |f| %>
+          <%= f.input :content, placeholder: "Write your review here" %>
+          <%= f.select :rating, (1..5) %>
+          <%= f.submit "Submit Review", class: "button" %>
+        <% end %>
+      </div>
+
+      <a class="button-back" href="<%= restaurants_path %>">Back</a>
+    </div>
+</body>
+</html>

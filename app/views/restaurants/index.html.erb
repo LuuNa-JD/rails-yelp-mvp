@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' %>
+    <title>Liste des restaurants</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="restaurant-title">Restaurants</h1>
+        <ul class="restaurant-list">
+          <% @restaurants.each do |restaurant| %>
+            <li class="restaurant-item">
+              <div class="restaurant-name">
+                <%= link_to restaurant.name, restaurant_path(restaurant), class: "restaurant-link" %>
+              </div>
+              <div class="restaurant-rating">
+                <%= render 'shared/rating', rating: restaurant.average_rating %>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+        <%= link_to "New Restaurant", new_restaurant_path, class: "button"%>
+    </div>
+</body>
+</html>

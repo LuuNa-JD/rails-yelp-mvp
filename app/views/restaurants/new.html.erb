@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nouveau restaurant</title>
+  <link rel="stylesheet" href="your-styles.css"> <!-- Link to your custom CSS file -->
+</head>
+<body>
+  <div class="container">
+    <h1>Restaurant</h1>
+    <%= simple_form_for(@restaurant) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.collection_select :category, Restaurant::CATEGORIES, :to_s, :humanize, include_blank: true %>
+      <%= f.input :phone_number %>
+    <div class="button-new">
+      <%= f.button :submit %>
+    </div>
+    <% end %>
+
+    <a class="button" href="<%= restaurants_path %>">Retour à la liste</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<% stars = rating ? rating.to_i : 0 %>
+<% empty_stars = 5 - stars %>
+
+<div class="rating">
+  <% stars.times do %>
+    <span class="fas fa-star text-warning"></span>
+  <% end %>
+  <% empty_stars.times do %>
+    <span class="far fa-star text-warning"></span>
+  <% end %>
+</div>

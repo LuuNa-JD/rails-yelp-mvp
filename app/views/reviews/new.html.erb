@@ -1,0 +1,5 @@
+<%= form_with(model: [@restaurant, @restaurant.reviews.build], local: true) do |form| %>
+  <%= form.text_area :content, placeholder: "Write your review here" %>
+  <%= form.select :rating, (1..5) %>
+  <%= form.submit "Submit Review", class: "button" %>
+<% end %>
